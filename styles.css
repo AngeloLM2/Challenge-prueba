@@ -1,0 +1,167 @@
+body {
+    background-color: #f0f4ff; /* Fondo azul pastel tenue */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.input-section, .output-section {
+    padding: 20px;
+}
+
+.input-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-upper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-lower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-section label {
+    margin-bottom: 10px;
+    color: #0a3064; /* Azul oscuro */
+    font-size: 1.2rem;
+}
+
+.input-section input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f0f4ff;
+    border-radius: 4px;
+    background-color: #f0f4ff; /* Fondo del input */
+    font-size: 1rem;
+}
+
+.warning {
+    color: grey;
+    margin-bottom: 5px;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaciado entre botones */
+    width: 100%;
+}
+
+.encrypt-button, .decrypt-button {
+    background-color: #0a3064; /* Color de fondo azul oscuro */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 15px; /* Bordes redondeados */
+    font-size: 1rem;
+    cursor: pointer;
+    width: 50%; /* Tamaño reducido para alinearlos */
+}
+
+.decrypt-button {
+    background-color: white;
+    color: #0a3064; /* Color de texto azul oscuro */
+    border: 1px solid #0a3064;
+}
+
+.encrypt-button:hover, .decrypt-button:hover {
+    opacity: 0.8;
+}
+
+.separator {
+    width: 1px;
+    background-color: #e6e9ee;
+}
+
+.output-section {
+    flex: 1;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.output-section img {
+    width: 200px;
+    margin: 0 auto 20px auto;
+}
+
+.output-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.instruction {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.output-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.output-section textarea {
+    width: 100%;
+    height: 150px; /* Altura suficiente para mostrar el texto encriptado */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #a3c2e2;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-shadow: none; /* Elimina el recuadro */
+    resize: vertical; /* Permite al usuario cambiar la altura */
+}
+
+.output-section button {
+    background-color: #0a3064; /* Color de fondo azul oscuro */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px; /* Bordes redondeados */
+    font-size: 1rem;
+    cursor: pointer;
+}
+.presetacion__alura{
+    width: 40%;
+    padding: 15px;
+    margin-bottom: 550px;
+}
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .separator {
+        width: 1px;
+        height: auto;
+    }
+}

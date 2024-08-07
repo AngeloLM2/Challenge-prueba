@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptar y Desencriptar Texto</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <header>
+        <a class="presentacion__enlaces__link" href="index.html" >
+            <img class="presetacion__alura" src="./assets/alura.png">
+        </a>
+    </header>
+    <div class="container">
+        <div class="input-section">
+            <div class="input-upper">
+                <input type="text" id="inputText" name="inputText" placeholder="Ingrese el texto aqui" required>
+            </div>
+            <div class="input-lower">
+                <p class="warning">¡Solo letras minúsculas, sin tildes ni caracteres especiales!</p>
+                <p id="error" class="error"></p>
+                <div class="button-container">
+                    <button type="button" class="encrypt-button" onclick="encryptText()">Encriptar</button>
+                    <button type="button" class="decrypt-button" onclick="decryptText()">Desencriptar</button>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="output-section">
+            <img id="placeholder-image" src="assets/lupa.png" alt="No message found image">
+            <p id="output-message" class="output-message">Ningún mensaje fue encontrado</p>
+            <p id="instruction" class="instruction">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <label for="resultText">Texto resultado:</label>
+            <textarea id="resultText" name="resultText" readonly></textarea>
+            <button type="button" onclick="copyText()">Copiar</button>
+        </div>
+    </div>
+</body>
+</html>
